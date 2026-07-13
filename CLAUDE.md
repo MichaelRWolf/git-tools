@@ -14,7 +14,10 @@ Repository of tools, challenges, and community resources for improving Git-based
 
 **Objective:** Promote a universal norm across software projects: for every repo, you should be able to clone it and run build/test scripts that "just work."
 
-**Origin:** Inspired by Jay Bazuzi's suggestion on improving developer experience and reducing toolchain friction.
+**Origin:** Inspired by Jay Bazuzi's LinkedIn post (Bazuzi, 2026) on improving developer experience and reducing toolchain friction.
+
+**Citation:**  
+Bazuzi, J. (2026). For every source repo in the world, I should... [Status update]. LinkedIn. Retrieved from https://www.linkedin.com/posts/jaybazuzi_for-every-source-repo-in-the-world-i-should-share-7479569344025292800-dfc8/
 
 **Deliverables:**
 - Challenge prompt for community participation

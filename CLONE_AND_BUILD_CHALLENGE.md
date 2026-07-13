@@ -6,6 +6,9 @@ Jay Bazuzi recently suggested that **every software project should adopt a unive
 
 > For every source repo in the world, you should be able to clone it onto a clean machine, run a "build and test" script at the root, and it should just work.
 
+**Original Source:**  
+Bazuzi, J. (2026). For every source repo in the world, I should... [Status update]. LinkedIn. Retrieved from https://www.linkedin.com/posts/jaybazuzi_for-every-source-repo-in-the-world-i-should-share-7479569344025292800-dfc8/
+
 I turned this into a challenge for my own repositories and ran an audit across my 24 most recently modified repos. Here are my results.
 
 ## My Results
