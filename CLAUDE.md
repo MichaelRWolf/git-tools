@@ -1,72 +1,101 @@
-# Git Tools - Project Documentation
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Repository Type
+
+**Reference & Documentation Repository** — This is not a software project. It contains documentation, analysis tools, and community-facing resources. No build, lint, or test infrastructure is required.
 
 ## Overview
 
-Repository of tools, challenges, and community resources for improving Git-based development workflows.
+Git Tools is a collection of resources promoting the "Clone and Just Works" norm: for every source repository, you should be able to clone it and run build/test scripts that "just work" without additional setup.
 
-## Projects
+## The Core Deliverable
 
-### Clone & Just Works Challenge
+**CLONE_AND_BUILD_CHALLENGE.md** is the main deliverable. It contains:
 
-**Status:** Active  
-**Owner:** Michael Wolf  
-**Started:** 2026-07-12  
+1. **Challenge framing** — Explains Jay Bazuzi's original concept and why it matters
+2. **Personal audit results** — Michael's analysis of 24 repos, categorized by type (code/documentation/config)
+3. **Ready-to-use prompt** — A self-contained prompt that others can copy into Claude Code to audit their own repos
+4. **Instructions for sharing** — How to run the audit, document results, and share with #CloneAndJustWorks
 
-**Objective:** Promote a universal norm across software projects: for every repo, you should be able to clone it and run build/test scripts that "just work."
+This file is meant to be **shared widely** — on social media, blogs, dev communities, etc.
 
-**Origin:** Inspired by Jay Bazuzi's LinkedIn post (Bazuzi, 2026) on improving developer experience and reducing toolchain friction.
-
-**Citation:**  
-Bazuzi, J. (2026). For every source repo in the world, I should... [Status update]. LinkedIn. Retrieved from https://www.linkedin.com/posts/jaybazuzi_for-every-source-repo-in-the-world-i-should-share-7479569344025292800-dfc8/
-
-**Deliverables:**
-- Challenge prompt for community participation
-- Analysis and audit templates
-- Categorized repo analysis showing code/documentation/config separation
-- Recommendations for improvement
-
-## Using These Files
-
-### For Your Own Audit
-
-Copy the prompt from `CLONE_AND_BUILD_CHALLENGE.md` into Claude Code and run it against your repo collection.
-
-### For Community Sharing
-
-Use the categorized matrix to clearly distinguish:
-- Code repos that should have build/test (use full status indicators)
-- Documentation repos that don't need build/test (N/A entries fade visually)
-- Config/infrastructure repos with limited applicability
-
-This prevents documentation repos from appearing as "failures."
-
-## Key Insights
-
-- Separate repos by type: code, documentation, configuration, projects
-- Only code repos should be expected to have build/test infrastructure
-- N/A entries should be visually de-emphasized (not red, not green)
-- The true metric: **of code repos with tests, what percentage pass?**
-
-## Future Ideas
-
-- Automate audit runs on schedule
-- Create a leaderboard of repos by "clone and just works" readiness
-- Build CI/CD templates for adding to existing projects
-- Create code-generation tools for Makefile/package.json build targets
-
-## Files in This Project
+## Supporting Files
 
 | File | Purpose |
 |------|---------|
-| CLONE_AND_BUILD_CHALLENGE.md | Community-facing challenge with embedded prompt |
-| build_and_test_matrix_categorized.md | Analysis results (markdown) |
-| build_and_test_matrix_categorized.html | Analysis results (interactive HTML) |
-| BUILD_TEST_AUDIT.md | Detailed findings and recommendations |
-| build_and_test_results.txt | Raw test execution output |
-| REPO_INVENTORY.txt | Categorization of analyzed repos |
-| LICENSE | MIT license |
-| README.md | Repository overview |
-| CLAUDE.md | This file |
+| **build_and_test_matrix_categorized.md** | Markdown version of analysis results; good for reading/discussion |
+| **build_and_test_matrix_categorized.html** | Interactive HTML version with dark mode; better for sharing/presentations |
+| **BUILD_TEST_AUDIT.md** | Detailed findings, root cause analysis, and improvement recommendations |
+| **build_and_test_results.txt** | Raw test execution output; reference for debugging/verification |
+| **REPO_INVENTORY.txt** | Full inventory showing how each repo was categorized |
+
+## Key Design Decisions
+
+### Repo Categorization
+
+The audit categorizes repos into three types:
+
+- **Code repos** (6) — Should have build/test infrastructure
+- **Documentation/notes repos** (14) — N/A for build/test (but this is correct, not a failure)
+- **Config/infrastructure repos** (4) — Limited applicability
+
+This distinction is critical: it prevents documentation repos from appearing as "failures" when they lack build/test infrastructure.
+
+### Visual Hierarchy
+
+The HTML matrix uses faded styling for N/A entries (60% opacity, gray text) so they don't draw attention. This visually de-emphasizes entries that don't apply, making the real gaps stand out.
+
+### Prompt Design
+
+The prompt in CLONE_AND_BUILD_CHALLENGE.md is self-contained and copy/paste-ready. It can be adapted for different repo collections by adjusting:
+
+- The time window ("modified in past 30 days" → adjust to "git commits in past 3 months", etc.)
+- The scope ("24 repos" → your actual number)
+- Which metrics matter for your context
+
+## Editing & Extending
+
+### When to Update CLONE_AND_BUILD_CHALLENGE.md
+
+Only for:
+
+- **Bug fixes** in the prompt or framing
+- **Clarifications** if people report confusion
+- **Improved examples** from community results
+
+Do not add new sections or reframe the challenge unless there's community feedback.
+
+### When to Create New Audit Reports
+
+If you run the audit again (e.g., 30 days later):
+
+1. Create a new dated file: `build_and_test_audit_2026-08-12.md`
+2. Update the main results to show the new date and numbers
+3. Link to previous audits for comparison
+
+This creates a historical record of progress.
+
+### For Community Contributions
+
+This repo is meant to accept community results. When someone shares their audit:
+
+1. They should use the same categorization (code/docs/config) to stay consistent
+2. Optionally create a `community-results/` directory for submissions
+3. Include their repo count and pass rates for comparison
+
+## Original Source
+
+This project was inspired by Jay Bazuzi's LinkedIn post:
+
+Bazuzi, J. (2026). For every source repo in the world, I should... [Status update]. LinkedIn. Retrieved from https://www.linkedin.com/posts/jaybazuzi_for-every-source-repo-in-the-world-i-should-share-7479569344025292800-dfc8/
+
+## Repo Characteristics
+
+- **License:** MIT (permissive; can be forked, modified, shared)
+- **Audience:** Software developers, team leads, project maintainers
+- **Share-friendly:** No credentials, no private info; designed for sharing
 
 ---
 
