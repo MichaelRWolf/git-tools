@@ -1,0 +1,571 @@
+# Repository Inventory and Classification
+
+
+## Adventure
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .pre-commit-config.yaml
+  Brevard_Area
+  CLAUDE.md
+  LICENSE
+  Makefile
+Total files:       11
+Contains: Markdown 
+Description:
+  Add pre-commit hooks and Makefile
+
+## AgileEngineeringFluency
+Key files/directories:
+  .
+  ..
+  .editorconfig
+  .git
+  .gitignore
+  CONTRIBUTORS.txt
+  README.md
+  Stages_of_practice_map.html
+  Stages_of_practice_map.pdf
+  index.html
+  params.json
+  run_tests.html
+  stages_data.js
+  static
+Total files:       32
+Contains: README Markdown 
+Description:
+  ^ F Add first node to the new "microskills" version. Use an existing name / description - just get something to appear on the graph.
+
+## Events
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .gitignore
+  .markdownlint.json
+  .pre-commit-config.yaml
+  .ruff_cache
+  2012_Beyond_Agile
+  2012_MAQcon
+  2022_Craft
+  2024-10-11_Software_Crafters_Unconference
+  2024-10-30_GenAI_Day_4
+  2024-11-21_Teaming_with_AI
+  2024-12-12_Virtual_Code_AI_Summit
+  Reunion
+  2025-03-27_GenAI_Day_5
+  2025-05-13_AI_Native_DevCon
+  2026-02-06_Software_Crafters_Unconference
+  2026-05-14_GenAI_Day_7
+Total files:      192
+Contains: Markdown 
+Description:
+  Notes for Tosi/Hendrickson sesson on U curves
+
+## FY-2025
+Key files/directories:
+  .
+  ..
+  .DS_Store
+  .claude
+  .git
+  .gitattributes
+  .gitignore
+  .markdownlint.json
+  .pre-commit-config.yaml
+  Amazon
+  MRW
+  CLAUDE.md
+  MRW
+  FreeTaxUSA_cheat_sheet.md
+  GoogleSheets
+  HOWTO_audit_simplifi_transaction_and_tax_files.md
+  HOWTO_categorize_amazon_transactions.md
+  HOWTO_categorize_direct_feeds.md
+  HOWTO_categorize_paypal_transactions.md
+  HOWTO_format_amazon_export_as_simplifi_import.md
+Total files:      166
+Contains: README 
+Description:
+  Update pre-commit hooks to latest stable versions
+
+## Harmony_United
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .gitignore
+  .markdownlint.json
+  .pre-commit-config.yaml
+  CLAUDE.md
+  Makefile
+  alfred_gerogiannis.md
+  message_from_Al_2026-05-07.txt
+  message_from_Al_2026-05-07_summary.md
+  session_note_2026-05-21.txt
+Total files:       10
+Contains: 
+Description:
+  Update markdownlint-cli to v0.49.0
+
+## Job_Search
+Key files/directories:
+  .
+  ..
+  .DS_Store
+  .ai-context.md
+  .cursor
+  .git
+  .gitattributes
+  .githooks
+  .gitignore
+  .markdownlint.json
+  .pre-commit-config.yaml
+  .vscode
+  2008
+  2010
+  2017
+  2018
+  2022
+  20_second_speech.txt
+  CLAUDE.md
+  CONTEXT.md
+Total files:     1632
+Contains: README 
+Description:
+  Update markdownlint-cli to v0.49.0; expand pretty-format-json scope to .vscode/ and .claude/
+
+## Portable_Profile
+Key files/directories:
+  .
+  ..
+  .DS_Store
+  .cargo
+  .cursor
+  .flake8
+  .git
+  .gitattributes
+  .gitignore
+  .gitmodules
+  .gitpod.yml
+  .idea
+  .markdownlint.json
+  .pre-commit-config.yaml
+  .prettierignore
+  .prettierrc
+  .pydocstyle
+  .vscode
+  CHANGES.log
+  CLAUDE.md
+Total files:      341
+Contains: docs/ README 
+Description:
+  Add .gitattributes for byte-fidelity (binary file handling)
+
+## RV_2003_Dutchman
+Key files/directories:
+  .
+  ..
+  .approval_tests_temp
+  .claude
+  .git
+  .gitattributes
+  .gitignore
+  .gitmodules
+  .markdownlint.json
+  .pre-commit-config.yaml
+  .pytest_cache
+  .ruff_cache
+  .venv
+  Bluetti_eb70_power_station
+  CLAUDE.md
+  CONTEXT.md
+  Makefile
+  PROJECT_2026-05_RV_registration_renewal
+  PROJECT_counter_caulking.md
+  PROJECT_kitchen_flooring
+Total files:     1506
+Contains: Python docs/ tests/ README 
+Description:
+  rv-network: replace 2.4G with spaces for cleaner band display
+
+## augmented-coding-patterns
+Key files/directories:
+  .
+  ..
+  .claude
+  .git
+  .github
+  .gitignore
+  CLAUDE.md
+  CONTRIBUTE.md
+  README.md
+  build_and_run.sh
+  deploy.sh
+  documents
+  scripts
+  slides
+  specs
+  talk_path.md
+  test.sh
+  tools
+  website
+Total files:      213
+Contains: README 
+Description:
+  Updated reverse direction example
+
+## chatgpt-tools
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .pre-commit-config.yaml
+  LICENSE
+  Makefile
+  README.md
+  SECURITY.md
+  memories
+Total files:       19
+Contains: README 
+Description:
+  Update markdownlint-cli to v0.49.0
+
+## chatgpt-utilities
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  bin
+  cite-and-summarize
+  requirements.in
+  requirements.txt
+  tests
+Total files:       14
+Contains: tests/ 
+Description:
+  Configure git attributes: -text and diff for all files
+
+## claude-tools
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .markdownlint.json
+  .pre-commit-config.yaml
+  CHANGELOG.md
+  CLAUDE.md
+  CONTEXT.md
+  Makefile
+  README.md
+  commands
+  docs
+  skills
+Total files:       32
+Contains: docs/ README 
+Description:
+  Announce repo root at each prompt and final summary in setup-pre-commit-hooks skill.
+
+## daylite_replacement
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .gitignore
+  .pre-commit-config.yaml
+  LICENSE
+  Makefile
+  README.md
+  enhancement_workflow.md
+  notes.md
+  schema.md
+  schema.mmd
+  schema_diagram.md
+Total files:       11
+Contains: README 
+Description:
+  Add pre-commit hooks and byte-fidelity gitattributes
+
+## dotfiles
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .gitignore
+  .idea
+  .pre-commit-config.yaml
+  LICENSE
+  MIGRATION_ANALYSIS.md
+  MIGRATION_PLAN.md
+  Makefile
+  README.md
+  TODO.md
+  org-realm
+  org-roam
+  renovate.json
+  ssh
+Total files:       26
+Contains: README 
+Description:
+  Update loco-bridge SSH config with role clarification
+
+## green-path-master-class
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .gitignore
+  .gitmodules
+  .markdownlint.json
+  .pre-commit-config.yaml
+  Mapping
+  Makefile
+  README.md
+  docs
+  video_testimonial
+Total files:       38
+Contains: docs/ README Markdown 
+Description:
+  Add pre-commit configuration and Makefile for hook setup
+
+## notes
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .markdownlint.json
+  .markdownlint.yaml
+  .pre-commit-config.yaml
+  .vscode
+  20250716T230940--denote-as-antidote-to-org-roam-debacle__denote_emacs_notetaking_orgroam.org
+  20250716T231748--org-roam__emacs_orgroam.org
+  20250716T231858--green-path-master-class-2025-07-07p12w__greenpath.org
+  20250717T001407--trails-end-campground__copperharbormi.org
+  20250721T144149--trail-end-wifi__internet.org
+  20250724T132039--five-blind-men-naming-elephant-tests__testing.org
+  20250726T162227--bolt-hackathon-results-2025-07__bolt_hackathon.org
+  20250726T184111--keyboard-shortcut-keytops__shortcut.org
+  20250726T184231--cursor-keyboard-shortcuts__shortcut.org
+  20250726T184428--keyboard-shortcuts-many-applications__shortcut.org
+  20250726T185310--zoom-keyboard-shortcuts__short_zoom.org
+  20250728T141537--demo-make-the-change-easy-kent-beck->-emily-bache->-ivette-ördög__refactoring_youtube.org
+Total files:       55
+Contains: README 
+Description:
+  Fix URL formatting in citation
+
+## pre-commit
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .github
+  .gitignore
+  .pre-commit-config.yaml
+  .pre-commit-hooks.yaml
+  CHANGELOG.md
+  CONTRIBUTING.md
+  LICENSE
+  README.md
+  build
+  pre_commit
+  pre_commit.egg-info
+  requirements-dev.txt
+  setup.cfg
+  setup.py
+  testing
+  tests
+Total files:      358
+Contains: tests/ README 
+Description:
+  Configure git attributes: -text and diff for all files
+
+## rainbow-springs
+Key files/directories:
+  .
+  ..
+  .DS_Store
+  .git
+  .gitattributes
+  .markdownlint.json
+  .pre-commit-config.yaml
+  CLAUDE.md
+  CONTEXT.md
+  LICENSE
+  Makefile
+  README.md
+  docs
+Total files:       16
+Contains: docs/ README 
+Description:
+  Update markdownlint-cli to v0.49.0
+
+## shortcuts
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .gitignore
+  .gitmodules
+  .markdownlint.json
+  .pre-commit-config.yaml
+  1password_shortcuts.md
+  LICENSE
+  Makefile
+  README.md
+  convert_org_to_md
+  cursor_shortcuts.md
+  keyboard_shortcuts.plan.md
+  keyboard_shortcuts_index.md
+  package-lock.json
+  package.json
+  zoom_shortcuts.md
+Total files:       27
+Contains: JS/Node README 
+Description:
+  Set up pre-commit hooks from canonical snippets
+
+## skills-mattpocock
+Key files/directories:
+  .
+  ..
+  .agents
+  .changeset
+  .claude-plugin
+  .git
+  .github
+  .gitignore
+  .out-of-scope
+  CHANGELOG.md
+  CLAUDE.md
+  CONTEXT.md
+  LICENSE
+  README.md
+  docs
+  package-lock.json
+  package.json
+  scripts
+  skills
+Total files:      114
+Contains: JS/Node docs/ README 
+Description:
+  chore: version skills
+
+## trails-end-campground
+Key files/directories:
+  .
+  ..
+  .git
+  .gitattributes
+  .gitignore
+  .gitmodules
+  .markdownlint.json
+  .pre-commit-config.yaml
+  2026-Summer.md
+  CLAUDE.md
+  LICENSE
+  Makefile
+  PROJECT_ORGANIZATION.md
+  README.md
+  Soil_and_Soul_Farm_logo_IMG_2827.jpeg
+  Soil_and_Soul_Logo_ChatGPT_v1.png
+  Soil_and_Soul_Logo_ChatGPT_v2.png
+  Trails_End_Campground_logo_20210406.webp
+  Trails_End_Logo_ChatGPT_v1.png
+  Trails_End_Logo_ChatGPT_v2.png
+Total files:      109
+Contains: README 
+Description:
+  Add speedtest logs from July 6 signal mapping
+
+## white-box
+Key files/directories:
+  .
+  ..
+  .claude
+  .git
+  .gitattributes
+  .gitignore
+  .gitmodules
+  .markdownlint.json
+  .pre-commit-config.yaml
+  CLAUDE.md
+  Florida_to_Michigan_routing.md
+  Makefile
+  Michael_Wallet
+  PROJECT_passport_renewal_michael_2026-05
+  README.md
+  credit_cards
+  docs
+  michael_retirement
+  plan_michael_65.md
+  terminology.md
+Total files:       53
+Contains: docs/ README 
+Description:
+  Enable Python linting (ruff) and migrate .gitattributes to byte-fidelity form
+
+## wisdom
+Key files/directories:
+  .
+  ..
+  .claude
+  .git
+  .gitattributes
+  .gitignore
+  .markdownlint.json
+  .pre-commit-config.yaml
+  LICENSE
+  Makefile
+  PROJECT_quote_consolidation.md
+  README.md
+  StrengthsFinder2.0
+  bin
+  logs
+  quotes.txt
+  quotes_commit_info.md
+  quotes_commit_info.md~
+Total files:       21
+Contains: README 
+Description:
+  Verify and fix pre-commit configuration
+
+## wolf-soho
+Key files/directories:
+  .
+  ..
+  .DS_Store
+  .claude
+  .cursor
+  .git
+  .gitattributes
+  .gitignore
+  .gitmodules
+  .markdownlint.json
+  .pre-commit-config.yaml
+  1910012830_RE505X&RE605X&RE603X_UG_REV1.2.0.pdf
+  2026-06-18_michael-pro_water-damage.md
+  2026-07-summer_trails_end.md
+  AT&T
+  ATT
+  list.pdf
+  Atlassian
+  Backups
+  CLAUDE.md
+Total files:      224
+Contains: README 
+Description:
+  Standardize Injector included row: use identical wording across all three devices.

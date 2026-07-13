@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build & Test Matrix - Categorized</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            padding: 2rem;
+            background: #f6f8fa;
+            color: #24292f;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #0d1117;
+                color: #e6edf3;
+            }
+        }
+
+        h1, h2 {
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            margin-top: 2rem;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .summary-card {
+            padding: 1.5rem;
+            border-radius: 6px;
+            border: 1px solid #d0d7de;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .summary-card {
+                border-color: #30363d;
+                background: #161b22;
+            }
+        }
+
+        .summary-card h3 {
+            font-size: 0.9rem;
+            color: #57606a;
+            margin: 0 0 0.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .summary-card h3 {
+                color: #8b949e;
+            }
+        }
+
+        .summary-card .number {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+
+        .summary-card .detail {
+            font-size: 0.85rem;
+            color: #57606a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .summary-card .detail {
+                color: #8b949e;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            table {
+                background: #0d1117;
+                border-color: #30363d;
+            }
+        }
+
+        th {
+            background: #f6f8fa;
+            border: 1px solid #d0d7de;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            th {
+                background: #161b22;
+                border-color: #30363d;
+            }
+        }
+
+        td {
+            padding: 0.75rem;
+            border: 1px solid #d0d7de;
+            font-size: 0.9rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            td {
+                border-color: #30363d;
+            }
+        }
+
+        tr:nth-child(even) {
+            background: #f6f8fa;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            tr:nth-child(even) {
+                background: #0d1117;
+            }
+        }
+
+        tr:hover {
+            background: #fef2cd;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            tr:hover {
+                background: #3d2817;
+            }
+        }
+
+        /* Category badge */
+        .category {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .category.code {
+            background: #ddf4ff;
+            color: #033d8b;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .category.code {
+                background: #0f3950;
+                color: #7ee7ff;
+            }
+        }
+
+        .category.documentation {
+            background: #f3e5ff;
+            color: #5e189b;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .category.documentation {
+                background: #3d1f5f;
+                color: #d89cff;
+            }
+        }
+
+        .category.notes {
+            background: #fffbdd;
+            color: #74430d;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .category.notes {
+                background: #4d3819;
+                color: #ffc60a;
+            }
+        }
+
+        .category.project {
+            background: #d4f4e6;
+            color: #0f4532;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .category.project {
+                background: #1f3d32;
+                color: #7ee7d1;
+            }
+        }
+
+        .category.config {
+            background: #f0f0f0;
+            color: #424242;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .category.config {
+                background: #2d2d2d;
+                color: #e0e0e0;
+            }
+        }
+
+        /* Status indicators */
+        .pass {
+            color: #1a7f0d;
+            font-weight: 600;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .pass {
+                color: #3fb950;
+            }
+        }
+
+        .fail {
+            color: #d1242f;
+            font-weight: 600;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .fail {
+                color: #f85149;
+            }
+        }
+
+        .na {
+            color: #8b949e;
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .present {
+            color: #1a7f0d;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .present {
+                color: #3fb950;
+            }
+        }
+
+        .absent {
+            color: #8b949e;
+            opacity: 0.5;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            margin: 0;
+        }
+
+        .section-badge {
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-code {
+            background: #ddf4ff;
+            color: #033d8b;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .badge-code {
+                background: #0f3950;
+                color: #7ee7ff;
+            }
+        }
+
+        .badge-doc {
+            background: #f3e5ff;
+            color: #5e189b;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .badge-doc {
+                background: #3d1f5f;
+                color: #d89cff;
+            }
+        }
+
+        .badge-other {
+            background: #fffbdd;
+            color: #74430d;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .badge-other {
+                background: #4d3819;
+                color: #ffc60a;
+            }
+        }
+
+        .footer {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #d0d7de;
+            font-size: 0.85rem;
+            color: #57606a;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .footer {
+                border-color: #30363d;
+                color: #8b949e;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Build & Test Matrix - Categorized</h1>
+    <p>24 repos analyzed (modified in past 30 days)</p>
+
+    <div class="summary">
+        <div class="summary-card">
+            <h3>Executable Code</h3>
+            <div class="number">6</div>
+            <div class="detail">Repos that should have build/test</div>
+        </div>
+        <div class="summary-card">
+            <h3>Documentation & Notes</h3>
+            <div class="number">14</div>
+            <div class="detail">N/A for build/test</div>
+        </div>
+        <div class="summary-card">
+            <h3>Config & Infrastructure</h3>
+            <div class="number">4</div>
+            <div class="detail">Limited build/test applicability</div>
+        </div>
+        <div class="summary-card">
+            <h3>Tests Passing</h3>
+            <div class="number">2</div>
+            <div class="detail">Out of 6 code repos</div>
+        </div>
+    </div>
+
+    <!-- EXECUTABLE CODE SECTION -->
+    <div class="section-header">
+        <h2>Executable Code Repositories</h2>
+        <span class="section-badge badge-code">SHOULD HAVE BUILD/TEST</span>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Repo</th>
+                <th>Category</th>
+                <th>Has Build</th>
+                <th>Has Test</th>
+                <th>Build Status</th>
+                <th>Test Status</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Portable_Profile</strong></td>
+                <td><span class="category code">Utility</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="present">✅</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="pass">✅ PASS</span></td>
+                <td>24 BATS tests passing</td>
+            </tr>
+            <tr>
+                <td><strong>RV_2003_Dutchman</strong></td>
+                <td><span class="category code">Utility (Python)</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="present">✅</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="pass">✅ PASS</span></td>
+                <td>9 pytest tests passing</td>
+            </tr>
+            <tr>
+                <td><strong>augmented-coding-patterns</strong></td>
+                <td><span class="category code">JavaScript App</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="present">✅</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="fail">❌ FAIL</span></td>
+                <td>Missing npm dependencies; jest not found</td>
+            </tr>
+            <tr>
+                <td><strong>pre-commit</strong></td>
+                <td><span class="category code">Python Package</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="present">✅</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">—</span></td>
+                <td>Has tests/testing dir; not run (external repo)</td>
+            </tr>
+            <tr>
+                <td><strong>rainbow-springs</strong></td>
+                <td><span class="category code">React App</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Lovable project spec; needs build/test setup</td>
+            </tr>
+            <tr>
+                <td><strong>skills-mattpocock</strong></td>
+                <td><span class="category code">Node.js Package</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>External repo; minimal infrastructure</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- DOCUMENTATION & NOTES SECTION -->
+    <div class="section-header">
+        <h2>Documentation & Notes Repositories</h2>
+        <span class="section-badge badge-doc">N/A FOR BUILD/TEST</span>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Repo</th>
+                <th>Category</th>
+                <th>Build</th>
+                <th>Test</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>notes</strong></td>
+                <td><span class="category notes">Note Taking</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Org-roam note collection</td>
+            </tr>
+            <tr>
+                <td><strong>Events</strong></td>
+                <td><span class="category notes">Event Notes</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Conference/event documentation</td>
+            </tr>
+            <tr>
+                <td><strong>Harmony_United</strong></td>
+                <td><span class="category notes">Project Notes</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Meeting notes and project documentation</td>
+            </tr>
+            <tr>
+                <td><strong>green-path-master-class</strong></td>
+                <td><span class="category documentation">Course Materials</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Course documentation and notes</td>
+            </tr>
+            <tr>
+                <td><strong>chatgpt-tools</strong></td>
+                <td><span class="category documentation">Documentation</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Tool documentation and guides</td>
+            </tr>
+            <tr>
+                <td><strong>claude-tools</strong></td>
+                <td><span class="category documentation">Documentation</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Tool documentation and commands</td>
+            </tr>
+            <tr>
+                <td><strong>daylite_replacement</strong></td>
+                <td><span class="category documentation">Project Design</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Schema design and specifications</td>
+            </tr>
+            <tr>
+                <td><strong>AgileEngineeringFluency</strong></td>
+                <td><span class="category documentation">Reference Material</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Interactive visualization / reference</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- PROJECTS SECTION -->
+    <div class="section-header">
+        <h2>Project & Personal Repositories</h2>
+        <span class="section-badge badge-other">MIXED PURPOSE</span>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Repo</th>
+                <th>Category</th>
+                <th>Build</th>
+                <th>Test</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Job_Search</strong></td>
+                <td><span class="category project">Project</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Job search materials and tracking</td>
+            </tr>
+            <tr>
+                <td><strong>FY-2025</strong></td>
+                <td><span class="category project">Project</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Financial tracking and tax documents</td>
+            </tr>
+            <tr>
+                <td><strong>white-box</strong></td>
+                <td><span class="category project">Project</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Personal financial and retirement planning</td>
+            </tr>
+            <tr>
+                <td><strong>trails-end-campground</strong></td>
+                <td><span class="category project">Project</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Campground operations and logistics</td>
+            </tr>
+            <tr>
+                <td><strong>wolf-soho</strong></td>
+                <td><span class="category project">Personal Tools</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Personal document and tool collection</td>
+            </tr>
+            <tr>
+                <td><strong>wisdom</strong></td>
+                <td><span class="category project">Quote Archive</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Quotes and wisdom archive</td>
+            </tr>
+            <tr>
+                <td><strong>Adventure</strong></td>
+                <td><span class="category project">Trip Planning</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Travel planning and notes</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- CONFIGURATION SECTION -->
+    <div class="section-header">
+        <h2>Configuration & Infrastructure Repositories</h2>
+        <span class="section-badge badge-doc">LIMITED BUILD/TEST</span>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Repo</th>
+                <th>Category</th>
+                <th>Build</th>
+                <th>Test</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>dotfiles</strong></td>
+                <td><span class="category config">Configuration</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="na">N/A</span></td>
+                <td>Shell config, SSH, system setup</td>
+            </tr>
+            <tr>
+                <td><strong>chatgpt-utilities</strong></td>
+                <td><span class="category config">Utilities</span></td>
+                <td><span class="na">N/A</span></td>
+                <td><span class="present">✅</span></td>
+                <td>Command-line utilities and scripts</td>
+            </tr>
+            <tr>
+                <td><strong>shortcuts</strong></td>
+                <td><span class="category documentation">Reference</span></td>
+                <td><span class="absent">❌</span></td>
+                <td><span class="fail">❌ STUB</span></td>
+                <td>Keyboard shortcut documentation</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        <p><strong>Legend:</strong></p>
+        <ul style="margin-top: 0.5rem; margin-left: 1.5rem;">
+            <li><span class="na">N/A</span> = Not applicable (repo type doesn't require build/test)</li>
+            <li><span class="present">✅</span> = Present and working</li>
+            <li><span class="fail">❌</span> = Missing or failing</li>
+            <li><span class="fail">❌ STUB</span> = Default/placeholder test (not real)</li>
+        </ul>
+        <p style="margin-top: 1rem;">
+            <strong>Generated:</strong> 2026-07-12<br>
+            <strong>For challenge:</strong> See CLONE_AND_BUILD_CHALLENGE.md
+        </p>
+    </div>
+</body>
+</html>

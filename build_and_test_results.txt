@@ -1,0 +1,66 @@
+# Build & Test Results - Detailed
+
+
+## Portable_Profile
+Origin: git@github.com:MichaelRWolf/Portable_Profile
+Infrastructure: Makefile 
+Build: NONE
+Test: make test
+Test output:
+Running bats test suite (fast)...
+/Users/michael/repos/Portable_Profile/test
+/Users/michael/repos/Portable_Profile/test
+/Users/michael/repos/Portable_Profile/test
+1..24
+ok 1 debug: silent by default
+ok 2 debug: outputs to stderr when DEBUG=1
+ok 3 debug: outputs to stderr when VERBOSE=1
+ok 4 info: writes label and message to stderr
+ok 5 warn: writes label and message to stderr
+ok 6 error: writes label and message to stderr
+ok 7 fatal: writes label and message to stderr, exits 1 by default
+ok 8 fatal: exits with specified code
+ok 9 none of the functions write to stdout
+ok 10 script exists
+ok 11 requires URL or file path (rejects stdin)
+ok 12 help documents emit flags and suggested filename
+ok 13 emit-fetch-prompt with file suggests filename
+ok 14 emit-format-prompt with file suggests filename
+ok 15 emit-prompt with file suggests filename and has Phase 1 and Phase 2
+
+## RV_2003_Dutchman
+Origin: git@github.com:MichaelRWolf/RV_2003_Dutchman.git
+Infrastructure: Makefile 
+Build: NONE
+Test: make test
+Test output:
+uv run --extra dev pytest tests/
+============================= test session starts ==============================
+platform darwin -- Python 3.14.6, pytest-9.0.3, pluggy-1.6.0
+rootdir: /Users/michael/repos/RV_2003_Dutchman
+configfile: pyproject.toml
+plugins: approvaltests-17.3.0
+collected 9 items
+
+tests/test_rv_battery.py .........                                       [100%]
+
+============================== 9 passed in 0.15s ===============================
+
+## augmented-coding-patterns
+Origin: git@github.com:lexler/augmented-coding-patterns.git
+Infrastructure: GitHub-Actions test.sh 
+Build: NONE
+Test: bash test.sh
+Test output:
+
+> website@0.1.0 test
+> jest
+
+sh: jest: command not found
+
+## shortcuts
+Origin: git@github.com:MichaelRWolf/shortcuts.git
+Infrastructure: package.json Makefile 
+Build: NONE
+Test: npm test (cmd: echo "Error: no test specified" && exit 1)
+Test: (default npm stub, not real test)
