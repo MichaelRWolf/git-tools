@@ -1,12 +1,12 @@
 # Build & Test Matrix - Categorized
 
-**Last Updated:** 2026-07-12  
+**Last Updated:** 2026-07-12
 **Scope:** 24 repos modified in past 30 days
 
 ## Summary
 
 | Repo Type | Count | Status |
-|-----------|-------|--------|
+| ----------- | ------- | -------- |
 | **Executable Code** | 6 | Should have build/test |
 | **Documentation & Notes** | 14 | N/A for build/test |
 | **Config & Infrastructure** | 4 | Limited applicability |
@@ -28,6 +28,7 @@
 | **skills-mattpocock**         | Node.js Package | ❌        | ❌       | —            | —           | External repo; minimal infrastructure    |
 
 **Code Repo Summary:**
+
 - ✅ **2 repos (33%)** - Tests pass out of the box
 - ❌ **1 repo (17%)** - Has tests but fails (missing setup)
 - ❌ **3 repos (50%)** - No build/test infrastructure
@@ -57,6 +58,7 @@
 | **Adventure**               | Trip Planning         | Travel planning and notes                        |
 
 **Documentation Repo Summary:**
+
 - 14 repos (58% of total) - Documentation/notes only
 - No build/test infrastructure required ✓
 
@@ -73,6 +75,7 @@
 | **shortcuts**         | Reference     | Keyboard shortcut documentation    | ❌        | ❌ (stub) |
 
 **Config Repo Summary:**
+
 - 4 repos (17% of total) - Config and infrastructure
 - N/A for most build/test requirements
 
@@ -83,11 +86,13 @@
 ### For Code Repos (6 total)
 
 **✅ Strengths:**
+
 - 2 repos have solid test suites that pass reliably (Portable_Profile, RV_2003_Dutchman)
 - Both use appropriate frameworks (BATS for bash, pytest for Python)
 - Tests are production-ready
 
 **❌ Gaps:**
+
 - 3 repos (50%) have no build/test infrastructure at all
 - 1 repo has tests but missing npm dependencies (breaks "clone and just work")
 - No repos have a combined `build && test` target or script
@@ -95,6 +100,7 @@
 ### For Documentation Repos (14 total)
 
 **✅ Status:**
+
 - Correctly identified as documentation-only
 - No false requirement for build/test infrastructure
 - These repos are working as intended
@@ -102,6 +108,7 @@
 ### For Config Repos (4 total)
 
 **✅ Status:**
+
 - Limited or no build/test requirements
 - Serve specific purposes (configuration, reference, utilities)
 
@@ -112,6 +119,7 @@
 ### Priority 1: Fix Code Repos with Test Infrastructure
 
 **augmented-coding-patterns**
+
 - Problem: `npm install` not run before tests
 - Solution: Update test.sh to include npm install step, or add to CI/CD
 - Impact: Would bring code repo to 3/6 passing (50%)
@@ -119,15 +127,18 @@
 ### Priority 2: Add Build/Test to Remaining Code Repos
 
 **rainbow-springs** (React/Lovable app)
+
 - Add `npm install` → `npm run build` → `npm test` sequence
 - Create Makefile with `make test`, `make build`, `make verify` targets
 
 **skills-mattpocock** (external Node.js repo)
+
 - Consider contributing build/test setup to upstream
 
 ### Priority 3: Document Repo Types
 
 Consider adding a README section to documentation repos explaining:
+
 ```markdown
 ## Repo Type
 This is a **documentation** repository containing [notes|references|specifications].

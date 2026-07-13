@@ -3,7 +3,7 @@
 
 ## Portable_Profile
 Origin: git@github.com:MichaelRWolf/Portable_Profile
-Infrastructure: Makefile 
+Infrastructure: Makefile
 Build: NONE
 Test: make test
 Test output:
@@ -30,7 +30,7 @@ ok 15 emit-prompt with file suggests filename and has Phase 1 and Phase 2
 
 ## RV_2003_Dutchman
 Origin: git@github.com:MichaelRWolf/RV_2003_Dutchman.git
-Infrastructure: Makefile 
+Infrastructure: Makefile
 Build: NONE
 Test: make test
 Test output:
@@ -48,7 +48,7 @@ tests/test_rv_battery.py .........                                       [100%]
 
 ## augmented-coding-patterns
 Origin: git@github.com:lexler/augmented-coding-patterns.git
-Infrastructure: GitHub-Actions test.sh 
+Infrastructure: GitHub-Actions test.sh
 Build: NONE
 Test: bash test.sh
 Test output:
@@ -60,7 +60,7 @@ sh: jest: command not found
 
 ## shortcuts
 Origin: git@github.com:MichaelRWolf/shortcuts.git
-Infrastructure: package.json Makefile 
+Infrastructure: package.json Makefile
 Build: NONE
 Test: npm test (cmd: echo "Error: no test specified" && exit 1)
 Test: (default npm stub, not real test)

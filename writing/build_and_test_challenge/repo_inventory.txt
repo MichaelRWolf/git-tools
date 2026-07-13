@@ -13,7 +13,7 @@ Key files/directories:
   LICENSE
   Makefile
 Total files:       11
-Contains: Markdown 
+Contains: Markdown
 Description:
   Add pre-commit hooks and Makefile
 
@@ -34,7 +34,7 @@ Key files/directories:
   stages_data.js
   static
 Total files:       32
-Contains: README Markdown 
+Contains: README Markdown
 Description:
   ^ F Add first node to the new "microskills" version. Use an existing name / description - just get something to appear on the graph.
 
@@ -61,7 +61,7 @@ Key files/directories:
   2026-02-06_Software_Crafters_Unconference
   2026-05-14_GenAI_Day_7
 Total files:      192
-Contains: Markdown 
+Contains: Markdown
 Description:
   Notes for Tosi/Hendrickson sesson on U curves
 
@@ -88,7 +88,7 @@ Key files/directories:
   HOWTO_categorize_paypal_transactions.md
   HOWTO_format_amazon_export_as_simplifi_import.md
 Total files:      166
-Contains: README 
+Contains: README
 Description:
   Update pre-commit hooks to latest stable versions
 
@@ -108,7 +108,7 @@ Key files/directories:
   message_from_Al_2026-05-07_summary.md
   session_note_2026-05-21.txt
 Total files:       10
-Contains: 
+Contains:
 Description:
   Update markdownlint-cli to v0.49.0
 
@@ -135,7 +135,7 @@ Key files/directories:
   CLAUDE.md
   CONTEXT.md
 Total files:     1632
-Contains: README 
+Contains: README
 Description:
   Update markdownlint-cli to v0.49.0; expand pretty-format-json scope to .vscode/ and .claude/
 
@@ -162,7 +162,7 @@ Key files/directories:
   CHANGES.log
   CLAUDE.md
 Total files:      341
-Contains: docs/ README 
+Contains: docs/ README
 Description:
   Add .gitattributes for byte-fidelity (binary file handling)
 
@@ -189,7 +189,7 @@ Key files/directories:
   PROJECT_counter_caulking.md
   PROJECT_kitchen_flooring
 Total files:     1506
-Contains: Python docs/ tests/ README 
+Contains: Python docs/ tests/ README
 Description:
   rv-network: replace 2.4G with spaces for cleaner band display
 
@@ -215,7 +215,7 @@ Key files/directories:
   tools
   website
 Total files:      213
-Contains: README 
+Contains: README
 Description:
   Updated reverse direction example
 
@@ -232,7 +232,7 @@ Key files/directories:
   SECURITY.md
   memories
 Total files:       19
-Contains: README 
+Contains: README
 Description:
   Update markdownlint-cli to v0.49.0
 
@@ -248,7 +248,7 @@ Key files/directories:
   requirements.txt
   tests
 Total files:       14
-Contains: tests/ 
+Contains: tests/
 Description:
   Configure git attributes: -text and diff for all files
 
@@ -269,7 +269,7 @@ Key files/directories:
   docs
   skills
 Total files:       32
-Contains: docs/ README 
+Contains: docs/ README
 Description:
   Announce repo root at each prompt and final summary in setup-pre-commit-hooks skill.
 
@@ -290,7 +290,7 @@ Key files/directories:
   schema.mmd
   schema_diagram.md
 Total files:       11
-Contains: README 
+Contains: README
 Description:
   Add pre-commit hooks and byte-fidelity gitattributes
 
@@ -314,7 +314,7 @@ Key files/directories:
   renovate.json
   ssh
 Total files:       26
-Contains: README 
+Contains: README
 Description:
   Update loco-bridge SSH config with role clarification
 
@@ -334,7 +334,7 @@ Key files/directories:
   docs
   video_testimonial
 Total files:       38
-Contains: docs/ README Markdown 
+Contains: docs/ README Markdown
 Description:
   Add pre-commit configuration and Makefile for hook setup
 
@@ -361,7 +361,7 @@ Key files/directories:
   20250726T185310--zoom-keyboard-shortcuts__short_zoom.org
   20250728T141537--demo-make-the-change-easy-kent-beck->-emily-bache->-ivette-ördög__refactoring_youtube.org
 Total files:       55
-Contains: README 
+Contains: README
 Description:
   Fix URL formatting in citation
 
@@ -388,7 +388,7 @@ Key files/directories:
   testing
   tests
 Total files:      358
-Contains: tests/ README 
+Contains: tests/ README
 Description:
   Configure git attributes: -text and diff for all files
 
@@ -408,7 +408,7 @@ Key files/directories:
   README.md
   docs
 Total files:       16
-Contains: docs/ README 
+Contains: docs/ README
 Description:
   Update markdownlint-cli to v0.49.0
 
@@ -434,7 +434,7 @@ Key files/directories:
   package.json
   zoom_shortcuts.md
 Total files:       27
-Contains: JS/Node README 
+Contains: JS/Node README
 Description:
   Set up pre-commit hooks from canonical snippets
 
@@ -460,7 +460,7 @@ Key files/directories:
   scripts
   skills
 Total files:      114
-Contains: JS/Node docs/ README 
+Contains: JS/Node docs/ README
 Description:
   chore: version skills
 
@@ -487,7 +487,7 @@ Key files/directories:
   Trails_End_Logo_ChatGPT_v1.png
   Trails_End_Logo_ChatGPT_v2.png
 Total files:      109
-Contains: README 
+Contains: README
 Description:
   Add speedtest logs from July 6 signal mapping
 
@@ -514,7 +514,7 @@ Key files/directories:
   plan_michael_65.md
   terminology.md
 Total files:       53
-Contains: docs/ README 
+Contains: docs/ README
 Description:
   Enable Python linting (ruff) and migrate .gitattributes to byte-fidelity form
 
@@ -539,7 +539,7 @@ Key files/directories:
   quotes_commit_info.md
   quotes_commit_info.md~
 Total files:       21
-Contains: README 
+Contains: README
 Description:
   Verify and fix pre-commit configuration
 
@@ -566,6 +566,6 @@ Key files/directories:
   Backups
   CLAUDE.md
 Total files:      224
-Contains: README 
+Contains: README
 Description:
   Standardize Injector included row: use identical wording across all three devices.

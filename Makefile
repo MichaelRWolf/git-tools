@@ -1,7 +1,7 @@
 .PHONY: help setup-hooks
 
 help:
-	@echo "Git Tools - Available targets:"
+	@echo "Git Hooks - Available targets:"
 	@echo ""
 	@echo "  make setup-hooks    Install pre-commit hooks"
 	@echo "  make help           Show this help message"

@@ -7,7 +7,7 @@
 ## Summary
 
 | Category | Count | Percentage |
-|----------|-------|-----------|
+| ---------- | ------- | ----------- |
 | Repos with NO build/test infrastructure | 20 | 83% |
 | Repos with test infrastructure | 4 | 17% |
 | Repos where tests pass | 2 | 8% |
@@ -18,12 +18,14 @@
 ### ✅ Passing Tests (2 repos)
 
 #### 1. Portable_Profile
+
 - **Test Infrastructure:** Makefile target `make test`
 - **Test Framework:** BATS (bash automated testing system)
 - **Result:** ✅ 24 tests pass
 - **Status:** Production-ready
 
 #### 2. RV_2003_Dutchman
+
 - **Test Infrastructure:** Makefile target `make test`
 - **Test Framework:** pytest (Python)
 - **Result:** ✅ 9 tests pass
@@ -32,12 +34,14 @@
 ### ⚠️ Failing or Incomplete (2 repos)
 
 #### 3. augmented-coding-patterns
+
 - **Test Infrastructure:** test.sh (calls npm test)
 - **Test Framework:** jest
 - **Result:** ❌ **FAIL** - jest not installed, npm dependencies missing
 - **Action Required:** Add `npm install` step before running tests, or document setup
 
 #### 4. shortcuts
+
 - **Test Infrastructure:** package.json (npm script)
 - **Test Framework:** None (default npm stub)
 - **Result:** ❌ **FAIL** - Test script is default npm placeholder
@@ -73,6 +77,7 @@ These repos have no build/test capability:
 **Current Status:** ❌ **FAILING**
 
 Of the 4 repos that have any test infrastructure:
+
 - 2 work correctly out of the box (50%)
 - 2 require additional setup or have dummy tests (50%)
 
@@ -97,26 +102,30 @@ Of the 4 repos that have any test infrastructure:
 For repos that contain executable code (RV_2003_Dutchman, augmented-coding-patterns, etc.):
 
 1. **Create a `build` target** in Makefile or package.json
-   ```makefile
+
+   ```make
    build: install
        npm run build   # or your build command
    ```
 
 2. **Create a `test` target** that includes dependency installation
-   ```makefile
+
+   ```make
    test: install
        npm test
    ```
 
 3. **Create a `build-and-test` or `verify` target**
-   ```makefile
+
+   ```make
    verify: build test
    ```
 
 4. **Document the expected outcome** in README
-   ```
+
+   ```markdown
    # Build & Test
-   
+
    make verify       # Runs full build and test suite
    make build        # Builds the project
    make test         # Runs tests
@@ -131,6 +140,7 @@ For repos that contain executable code (RV_2003_Dutchman, augmented-coding-patte
 ### Tier 3: Documentation
 
 For repos that are primarily documentation or configuration (notes, dotfiles, Events, etc.):
+
 - Add a README section explaining what the repo is and how to use it
 - If there's nothing to build/test, explicitly state that: "This is a [docs|config|reference] repo with no build step"
 

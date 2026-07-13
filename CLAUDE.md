@@ -12,7 +12,7 @@ Git Tools is a collection of resources promoting the "Clone and Just Works" norm
 
 ## The Core Deliverable
 
-**CLONE_AND_BUILD_CHALLENGE.md** is the main deliverable. It contains:
+**clone_and_build_challenge.md** is the main deliverable. It contains:
 
 1. **Challenge framing** — Explains Jay Bazuzi's original concept and why it matters
 2. **Personal audit results** — Michael's analysis of 24 repos, categorized by type (code/documentation/config)
@@ -24,12 +24,12 @@ This file is meant to be **shared widely** — on social media, blogs, dev commu
 ## Supporting Files
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | **build_and_test_matrix_categorized.md** | Markdown version of analysis results; good for reading/discussion |
 | **build_and_test_matrix_categorized.html** | Interactive HTML version with dark mode; better for sharing/presentations |
-| **BUILD_TEST_AUDIT.md** | Detailed findings, root cause analysis, and improvement recommendations |
+| **build_test_audit.md** | Detailed findings, root cause analysis, and improvement recommendations |
 | **build_and_test_results.txt** | Raw test execution output; reference for debugging/verification |
-| **REPO_INVENTORY.txt** | Full inventory showing how each repo was categorized |
+| **repo_inventory.txt** | Full inventory showing how each repo was categorized |
 
 ## Key Design Decisions
 
@@ -57,7 +57,7 @@ The prompt in CLONE_AND_BUILD_CHALLENGE.md is self-contained and copy/paste-read
 
 ## Editing & Extending
 
-### When to Update CLONE_AND_BUILD_CHALLENGE.md
+### When to Update clone_and_build_challenge.md
 
 Only for:
 
@@ -89,7 +89,7 @@ This repo is meant to accept community results. When someone shares their audit:
 
 This project was inspired by Jay Bazuzi's LinkedIn post:
 
-Bazuzi, J. (2026). For every source repo in the world, I should... [Status update]. LinkedIn. Retrieved from https://www.linkedin.com/posts/jaybazuzi_for-every-source-repo-in-the-world-i-should-share-7479569344025292800-dfc8/
+Bazuzi, J. (2026). For every source repo in the world, I should... [Status update]. LinkedIn. Retrieved from <https://www.linkedin.com/posts/jaybazuzi_for-every-source-repo-in-the-world-i-should-share-7479569344025292800-dfc8/>
 
 ## Repo Characteristics
 
